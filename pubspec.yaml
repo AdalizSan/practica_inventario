@@ -1,0 +1,46 @@
+name: ambar_inventario
+description: Inventario local con trazabilidad, etiquetas y control de existencias.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.1.5
+  cupertino_icons: ^1.0.8
+  sqflite: ^2.4.2
+  sqflite_common_ffi: ^2.3.6
+  sqflite_common_ffi_web: ^1.1.1
+  path: ^1.9.1
+  mobile_scanner: ^7.1.0
+  barcode_widget: ^2.0.4
+  qr_flutter: ^4.1.0
+  pdf: ^3.11.3
+  printing: ^5.14.2
+  share_plus: ^12.0.0
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  flutter_animate: ^4.5.2
+  animations: ^2.0.11
+  fl_chart: ^1.0.0
+  image_picker: ^1.2.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/demo.json
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope.ttf
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/SpaceGrotesk.ttf

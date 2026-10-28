@@ -1,0 +1,12 @@
+.dart_tool/
+.flutter-plugins-dependencies
+.idea/
+.metadata
+.pub/
+.pub-cache/
+.vscode/
+build/
+coverage/
+*.iml
+*.log
+*.swp
