@@ -2,7 +2,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
     <application
-        android:label="Ámbar Inventario"
+        android:label="Trazal Inventario"
         android:name="${applicationName}"
         android:icon="@drawable/ic_ambar">
         <activity

@@ -1,4 +1,4 @@
-name: ambar_inventario
+name: trazal_inventario
 description: Inventario local con trazabilidad, etiquetas y control de existencias.
 publish_to: none
 version: 1.0.0+1

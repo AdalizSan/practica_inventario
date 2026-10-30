@@ -1,4 +1,4 @@
-# Ámbar Inventario
+# Trazal Inventario
 
 Aplicación Flutter para administrar una pequeña tienda sin depender de una conexión. Catálogo editable, etiquetas Code 128 y QR, escáner, entradas, salidas, conteos físicos, alertas y exportación CSV.
 
@@ -40,6 +40,6 @@ Los movimientos confirmados no se pueden editar ni borrar. Una salida superior a
 
 ## Entrega y prueba física
 
-El repositorio incluye pruebas automatizadas de dominio, repositorio SQLite y navegación a cuatro tamaños de pantalla, con logs en `docs`. La lectura de ambos formatos con cámara, la instalación y el ciclo de vida Android deben validarse en un teléfono físico antes de la demostración; el documento de pruebas registra el estado real de esa validación.
+El repositorio incluye pruebas automatizadas de dominio, repositorio SQLite y navegación a cuatro tamaños de pantalla, con logs en `docs`. El APK se instaló en un Motorola edge 60 fusion con Android 16; la cámara se abrió y los datos persistieron tras una actualización. [El documento de pruebas](docs/pruebas.md) registra lo comprobado y lo que aún requiere verificación física.
 
 El APK académico usa firma de desarrollo. Las fuentes se distribuyen con sus licencias OFL. La exportación CSV es un reporte, no un respaldo restaurable completo.

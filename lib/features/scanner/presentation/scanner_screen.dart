@@ -93,12 +93,12 @@ class _ScannerScreenState extends State<ScannerScreen>
       );
       if (mounted && _enabled) await _start();
     } catch (e) {
-      if (_enabled) await _camera.stop();
       if (mounted) {
-        setState(() {
-          _error = AppController.friendly(e);
-          _enabled = false;
-        });
+        setState(() => _error = AppController.friendly(e));
+        if (_enabled) {
+          await Future<void>.delayed(const Duration(seconds: 2));
+          if (mounted) setState(() => _error = null);
+        }
       }
     } finally {
       _handling = false;

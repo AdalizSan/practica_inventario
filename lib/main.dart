@@ -65,7 +65,7 @@ class _BootstrapState extends State<Bootstrap> {
 
   @override
   Widget build(BuildContext context) => _controller != null
-      ? AmbarApp(controller: _controller!)
+      ? TrazalApp(controller: _controller!)
       : MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: appTheme(),
@@ -86,14 +86,14 @@ class _BootstrapState extends State<Bootstrap> {
         );
 }
 
-class AmbarApp extends StatelessWidget {
-  const AmbarApp({super.key, required this.controller});
+class TrazalApp extends StatelessWidget {
+  const TrazalApp({super.key, required this.controller});
   final AppController controller;
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider.value(
     value: controller,
     child: MaterialApp(
-      title: 'Ámbar Inventario',
+      title: 'Trazal Inventario',
       debugShowCheckedModeBanner: false,
       theme: appTheme(),
       locale: const Locale('es', 'GT'),

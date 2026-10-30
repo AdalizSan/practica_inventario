@@ -70,7 +70,7 @@ class _AppShellState extends State<AppShell> {
                       ),
                       SizedBox(width: 10),
                       Text(
-                        'ámbar',
+                        'trazal',
                         style: TextStyle(
                           fontFamily: 'SpaceGrotesk',
                           fontWeight: FontWeight.w600,
@@ -126,15 +126,17 @@ class _AppShellState extends State<AppShell> {
                               size: 34,
                             ),
                             SizedBox(width: 10),
-                            Flexible(child: Text(
-                              'ámbar',
-                              style: TextStyle(
-                                fontFamily: 'SpaceGrotesk',
-                                fontSize: 32,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: -1.4,
+                            Flexible(
+                              child: Text(
+                                'trazal',
+                                style: TextStyle(
+                                  fontFamily: 'SpaceGrotesk',
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: -1.4,
+                                ),
                               ),
-                            )),
+                            ),
                           ],
                         ),
                         const Padding(
@@ -170,33 +172,36 @@ class _AppShellState extends State<AppShell> {
                                     : Colors.transparent,
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child: Material(color: Colors.transparent, child: ListTile(
-                                key: ValueKey('nav_$i'),
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 14,
-                                ),
-                                minLeadingWidth: 20,
-                                leading: Icon(
-                                  _icons[i],
-                                  size: 21,
-                                  color: _index == i
-                                      ? AppColors.purple
-                                      : AppColors.muted,
-                                ),
-                                title: Text(
-                                  _labels[i],
-                                  style: TextStyle(
-                                    fontWeight: _index == i
-                                        ? FontWeight.w700
-                                        : FontWeight.w500,
-                                    fontSize: 13,
+                              child: Material(
+                                color: Colors.transparent,
+                                child: ListTile(
+                                  key: ValueKey('nav_$i'),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                    horizontal: 14,
+                                  ),
+                                  minLeadingWidth: 20,
+                                  leading: Icon(
+                                    _icons[i],
+                                    size: 21,
                                     color: _index == i
                                         ? AppColors.purple
                                         : AppColors.muted,
                                   ),
+                                  title: Text(
+                                    _labels[i],
+                                    style: TextStyle(
+                                      fontWeight: _index == i
+                                          ? FontWeight.w700
+                                          : FontWeight.w500,
+                                      fontSize: 13,
+                                      color: _index == i
+                                          ? AppColors.purple
+                                          : AppColors.muted,
+                                    ),
+                                  ),
+                                  onTap: () => _navigate(i),
                                 ),
-                                onTap: () => _navigate(i),
-                              )),
+                              ),
                             ),
                           ),
                         ),
@@ -237,38 +242,41 @@ class _AppShellState extends State<AppShell> {
                         ),
                         const SizedBox(height: 22),
                         const Divider(),
-                        Material(color: Colors.transparent, child: ListTile(
-                          contentPadding: EdgeInsets.zero,
-                          leading: CircleAvatar(
-                            backgroundColor: AppColors.lavender,
-                            child: Text(
-                              profile.responsible.characters.first
-                                  .toUpperCase(),
-                              style: const TextStyle(color: AppColors.purple),
+                        Material(
+                          color: Colors.transparent,
+                          child: ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            leading: CircleAvatar(
+                              backgroundColor: AppColors.lavender,
+                              child: Text(
+                                profile.responsible.characters.first
+                                    .toUpperCase(),
+                                style: const TextStyle(color: AppColors.purple),
+                              ),
                             ),
-                          ),
-                          title: Text(
-                            profile.responsible,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
+                            title: Text(
+                              profile.responsible,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
-                          ),
-                          subtitle: Text(
-                            profile.store,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 10,
-                              color: AppColors.muted,
+                            subtitle: Text(
+                              profile.store,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 10,
+                                color: AppColors.muted,
+                              ),
                             ),
+                            trailing: const Icon(
+                              Icons.settings_outlined,
+                              size: 18,
+                            ),
+                            onTap: _settings,
                           ),
-                          trailing: const Icon(
-                            Icons.settings_outlined,
-                            size: 18,
-                          ),
-                          onTap: _settings,
-                        )),
+                        ),
                       ],
                     ),
                   ),

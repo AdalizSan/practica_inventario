@@ -63,7 +63,7 @@ class ExportService {
             ),
             pw.Text(product.code, style: const pw.TextStyle(fontSize: 14)),
             pw.Text(
-              'Consulta las existencias en Ámbar',
+              'Consulta las existencias en Trazal',
               style: const pw.TextStyle(fontSize: 9),
             ),
           ],

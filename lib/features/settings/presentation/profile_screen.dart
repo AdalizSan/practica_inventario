@@ -58,7 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) => FormPage(
-    title: widget.onboarding ? 'Ámbar / Inventario' : 'Tu espacio',
+    title: widget.onboarding ? 'Trazal / Inventario' : 'Tu espacio',
     child: Form(
       key: _form,
       child: Column(
